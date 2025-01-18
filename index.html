@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>星瞻</title>
+    <link rel="icon" href="static/image/index-second-logo.icon" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/swiper.min.css">
+    <link rel="stylesheet" href="static/css/index2.min.css?t=22">
+
+</head>
+
+<body>
+    <div class="index-box" id="index">
+        <!-- 导航栏 -->
+        <div :class="{'nav-box-mobile-all':isMobile}">
+            <div class="nav-box" :class="{'nav-box-mobile':isMobile}">
+                <div class="nav-left-box">
+                    <img class="logo-png" src="static/image/logo.png" alt="">
+                    <div class="logo-text">星瞻</div>
+                </div>
+                <div class="nav-center-box">
+                    <div onclick="changeNav(0,'产品')" class="center-item0 center-item center-item-active">
+                        <span>产品</span>
+                        <div class="line"></div>
+                        <div class="product-box" :class="{'product-box-mobile':isMobile}">
+                            <a class="product-item" href="https://www.vprix.com">
+                                云桌面
+                            </a>
+                        </div>
+                    </div>
+                    <a href="https://doc.novawatcher.com" class="center-item">
+                        <span>文档</span>
+                        <div class="line"></div>
+                    </a>
+<!--                    <a onclick="changeNav(2,'博客')" class="center-item">-->
+<!--                        <span>博客</span>-->
+<!--                        <div class="line"></div>-->
+<!--                    </a>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="modules-box">
+            <div class="index-first-box" :class="{'index-first-box-mobile':isMobile}">
+                <div class="top-all">
+                    <span class="top-one">高性能</span>
+                    <span class="top-two">的云原生</span>
+                </div>
+                <div class="top-all top-all2">
+                    <span class="top-two">及</span>
+                    <span class="top-three">AI</span>
+                    <span class="top-two">应用的云成本可观测性方案</span>
+                </div>
+                <div class="bottom-all">
+                    <span class="bottom-one">省成本</span>
+                    <span class="bottom-two"> -分析系统闲置率，合理分配资源 </span>
+                </div>
+                <div class="bottom-all2">
+                    <span class="bottom-one">数据可视化</span>
+                    <span class="bottom-two">-后台数据分析结果，数据可视化清晰展示</span>
+                </div>
+            </div>
+            <div class="index-second-box" :class="{'index-second-box-mobile':isMobile}">
+                <div class="index-second-left">
+                    <div class="title">
+                        优化应用程序的核心性能
+                    </div>
+                    <div class="dec">
+                        立即在应用程序级进行优化，以提高CPU利用率、作业完成时间和延迟。
+                    </div>
+                </div>
+                <div class="index-second-right">
+                    <img class="index-second-right-bg" src="static/image/index-second-right-bg.png" alt="">
+                    <div class="rotate-box">
+                        <div class="rotate-center">
+                            <img class="rotate-logo" src="static/image/index-second-logo.png" alt="">
+                            <img class="shadow-logo" src="static/image/index-second-shadow.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="index-third-box index-third-box1" :class="{'index-third-box-mobile':isMobile}">
+                <div class="third-title">链路拓扑图</div>
+                <div class="third-dec-box">
+                    <span class="third-dec-left">数据可视化</span>
+                    <span class="third-dec-right">-后台数据分析结果，数据可视化清晰展示后台数据分析结果</span>
+                </div>
+                <div class="third-dec-box third-dec-box2">
+                    <span class="third-dec-right"> ，数据可视化清晰展示</span>
+                </div>
+                <div class="bj-03banner-img-box">
+                    <img class="bj-03banner-img bj-03banner-img2" src="static/image/bj-03banner-img.png" alt="">
+                </div>
+            </div>
+            <div class="index-third-box index-four-box" :class="{'index-third-box-mobile':isMobile,'index-four-box-mobile':isMobile}">
+                <div class="third-title">链路追踪</div>
+                <div class="third-dec-box">
+                    <span class="third-dec-right">基于</span>
+                    <span class="third-dec-left"> eBPF 的零侵扰分布式追踪能力</span>
+                    <span class="third-dec-right">，支持任意语言的应用程序，并完整覆网关、服务网络、数据库、</span>
+                </div>
+                <div class="third-dec-box third-dec-box2">
+                    <span class="third-dec-right">消息队列、DNS、网卡等各类基础设施，不留下任何追踪盲点。全栈，自动采集每个 Span 关联的网络性</span>
+                </div>
+                <div class="third-dec-box third-dec-box2">
+                    <span class="third-dec-right">能指标和文件读写事件。从此，分布式追踪进入零插桩的新时代。</span>
+                </div>
+                <div class="bj-03banner-img-box bj-04banner-img-box">
+                    <img class="bj-03banner-img bj-04banner-img" src="static/image/bj-04banner-img.png" alt="">
+                </div>
+            </div>
+            <div class="index-third-box index-five-box" :class="{'index-third-box-mobile':isMobile,'index-five-box-mobile':isMobile}">
+                <div class="third-title">功能图</div>
+                <div class="third-dec-box">
+                    <span class="third-dec-left">数据可视化</span>
+                    <span class="third-dec-right">-后台数据分析结果，数据可视化清晰展示后台数据分析结果</span>
+                </div>
+                <div class="third-dec-box third-dec-box2">
+                    <span class="third-dec-right"> ，数据可视化清晰展示</span>
+                </div>
+                <div class="bj-03banner-img-box bj-05banner-img-box">
+                    <img class="bj-03banner-img" src="static/image/bj-05banner-img.png" alt="">
+                </div>
+            </div>
+            <div class="index-six-box" :class="{'index-six-box-mobile':isMobile}">
+                <div class="six-title">架构图</div>
+                <div class="six-dec">通过实时流数据处理，FineDataLink对EVI系统实时产生的大数据量进行集成处理，联合其</div>
+                <div class="six-dec six-dec2"> 他系统数据对接，配合FineDataLink实时异常预警，大大提高了三一重机的调试效率。</div>
+                <div class="bj-06banner-img-box">
+                    <img class="bj-06banner-img" src="static/image/bj-06banner-img.png" alt="">
+                </div>
+            </div>
+            <div class="index-seven-box" :class="{'index-seven-box-mobile':isMobile}">
+                <div class="seven-title">统计闲置率</div>
+                <div class="seven-dec">在应用程序的核心获得更多</div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="bj-07banner-img-box">
+                                <img class="bj-07banner-img" src="static/image/bj-07banner-img.png" alt="">
+                                <div class="bj-07banner-right">
+                                    <div class="right-title">降低计算成本</div>
+                                    <div class="right-dec">
+                                        <div>在最佳性能下运行时，您的应用程序会降低</div>
+                                        <div>CPU利用率和内存，从而最大限度地减少碳</div>
+                                        <div>足迹并降低高达45%的成本。</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bj-07banner-img-box">
+                                <img class="bj-07banner-img" src="static/image/bj-07banner-img.png" alt="">
+                                <div class="bj-07banner-right">
+                                    <div class="right-title">降低计算成本</div>
+                                    <div class="right-dec">
+                                        <div>在最佳性能下运行时，您的应用程序会降低</div>
+                                        <div>CPU利用率和内存，从而最大限度地减少碳</div>
+                                        <div>足迹并降低高达45%的成本。</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bj-07banner-img-box">
+                                <img class="bj-07banner-img" src="static/image/bj-07banner-img.png" alt="">
+                                <div class="bj-07banner-right">
+                                    <div class="right-title">降低计算成本</div>
+                                    <div class="right-dec">
+                                        <div>在最佳性能下运行时，您的应用程序会降低</div>
+                                        <div>CPU利用率和内存，从而最大限度地减少碳</div>
+                                        <div>足迹并降低高达45%的成本。</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/vue.js"></script>
+    <script>
+        new Vue({
+            el: "#index",
+            data() {
+                return {
+                    isMobile: false,
+                };
+            },
+            mounted() {
+                this.onResize();
+                window.addEventListener("resize", this.onResize, {
+                    passive: true,
+                });
+            },
+            beforeDestroy() {
+                if (typeof window !== "undefined") {
+                    window.removeEventListener("resize", this.onResize, {
+                        passive: true,
+                    });
+                }
+            },
+            methods: {
+                // 窗口变换
+                onResize() {
+                    this.isMobile = window.innerWidth < 740;
+                },
+            },
+        });
+    </script>
+    <script src="static/js/swiper.min.js"></script>
+    <script>
+        let swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true
+        });
+
+        // 产品跳转
+        function productTo(text) {
+            window.open('http://81.71.98.26?text=' + text)
+        }
+    </script>
+</body>
+
+</html>
